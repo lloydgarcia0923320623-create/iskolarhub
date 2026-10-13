@@ -1,0 +1,80 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+      match /applicationStatuses/{scholarshipId} {
+        allow read: if request.auth != null && request.auth.uid == userId;
+        allow create, update: if request.auth != null
+          && request.auth.uid == userId
+          && request.resource.data.keys().hasOnly(['status', 'updatedAt'])
+          && request.resource.data.status in [
+            'notStarted',
+            'preparing',
+            'submitted',
+            'completed'
+          ]
+          && request.resource.data.updatedAt is timestamp;
+        allow delete: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+    match /scholarships/{scholarshipId} {
+      allow read: if true;
+      allow write: if request.auth != null && request.auth.token.admin == true;
+    }
+    match /scholarshipReports/{reportId} {
+      allow create: if request.auth != null
+        && request.resource.data.keys().hasOnly([
+          'scholarshipId',
+          'reporterUid',
+          'reason',
+          'note',
+          'status',
+          'createdAt'
+        ])
+        && request.resource.data.keys().hasAll([
+          'scholarshipId',
+          'reporterUid',
+          'reason',
+          'note',
+          'status',
+          'createdAt'
+        ])
+        && request.resource.data.reporterUid == request.auth.uid
+        && request.resource.data.scholarshipId is string
+        && request.resource.data.scholarshipId.size() > 0
+        && request.resource.data.scholarshipId.size() <= 200
+        && request.resource.data.reason == 'outdatedOrInconsistent'
+        && request.resource.data.note is string
+        && request.resource.data.note.size() >= 10
+        && request.resource.data.note.size() <= 1000
+        && request.resource.data.status == 'pending'
+        && request.resource.data.createdAt is timestamp;
+      allow read: if request.auth != null
+        && request.auth.token.admin == true;
+      allow update: if request.auth != null
+        && (
+          (
+            request.auth.token.admin == true
+            && request.resource.data.diff(resource.data).affectedKeys()
+              .hasOnly(['status', 'reviewerNote', 'reviewerUid', 'reviewedAt'])
+            && request.resource.data.status in [
+              'pending',
+              'reviewed',
+              'resolved',
+              'dismissed'
+            ]
+            && request.resource.data.reviewerNote is string
+            && request.resource.data.reviewerNote.size() <= 1000
+            && request.resource.data.reviewedAt is timestamp
+            && request.resource.data.reviewerUid == request.auth.uid
+          )
+          || (
+            request.resource.data.reporterUid == request.auth.uid
+            && request.resource.data == resource.data
+          )
+        );
+      allow delete: if false;
+    }
+  }
+}

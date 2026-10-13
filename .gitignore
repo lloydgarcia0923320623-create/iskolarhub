@@ -1,0 +1,17 @@
+.dart_tool/
+.packages
+.pub/
+build/
+.flutter-plugins-dependencies
+.dart_tool.zip
+.venv/
+.vs/
+.idea/
+.vscode/
+*.iml
+android/.kotlin/
+*.log
+.DS_Store
+Thumbs.db
+# Widget Preview related
+.widget_preview/
