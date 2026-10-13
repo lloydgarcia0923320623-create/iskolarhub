@@ -232,3 +232,185 @@ h1, h2, h3, p { margin-top: 0; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+:root {
+  color-scheme: dark;
+  --ink: #edf3ff;
+  --muted: #a0acc3;
+  --paper: #080d1a;
+  --white: #111a2c;
+  --green: #79c9f5;
+  --deep: #172847;
+  --mint: #9ee7ff;
+  --line: #202b40;
+  --lilac: #151b35;
+  --peach: #15243a;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 78% 8%, rgb(60 83 177 / 13%), transparent 33rem),
+    radial-gradient(ellipse at 5% 45%, rgb(43 115 159 / 9%), transparent 32rem),
+    var(--paper);
+  color: var(--ink);
+}
+
+.site-header {
+  border-bottom-color: rgb(127 155 203 / 12%);
+  background: rgb(8 13 26 / 86%);
+}
+
+.brand-mark { background: #182847; }
+.brand-name span { color: #82aaff; }
+.nav-links > a:not(.nav-cta) { color: #aab6cd; }
+.nav-links > a:not(.nav-cta):hover,
+.text-link span,
+.nav-cta span { color: #86dcfa; }
+.nav-cta {
+  border-color: #35435d;
+  background: #121b2e;
+  color: #e7effe;
+}
+.nav-cta:hover { box-shadow: 0 7px 24px rgb(81 155 226 / 16%); }
+.menu-toggle { border-color: #35435d; background: #121b2e; }
+.menu-toggle span { background: #e7effe; }
+
+.eyebrow { color: #aebbd3; }
+.status-dot { background: #73d7fa; box-shadow: 0 0 0 4px rgb(115 215 250 / 13%); }
+.hero h1 span,
+.hero .note-icon { color: #8dc5ff; }
+.hero-intro,
+.hero-note p { color: #a0acc3; }
+.button-dark { background: linear-gradient(120deg, #234276, #30598f); }
+.button-dark span { color: #adf0ff; }
+.text-link { color: #e2eafa; }
+.hero-note { border-top-color: #293750; }
+.hero-visual::before {
+  background: radial-gradient(circle, rgb(88 120 190 / 27%), rgb(48 84 139 / 16%) 48%, transparent 72%);
+}
+.orbit { border-color: rgb(131 164 221 / 23%); }
+.orbit-dot { border-color: #0b1120; background: #91e7ff; }
+.orbit-dot-two { background: #aa9cff; }
+.phone {
+  border-color: #182744;
+  box-shadow: 0 28px 75px rgb(0 0 0 / 48%), 0 0 44px rgb(91 153 223 / 15%), inset 0 0 0 1px #ffffff;
+}
+.visual-label {
+  border-color: #33415a;
+  background: #121c30;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 24%);
+  color: #d4e1f5;
+}
+.label-top span,
+.label-bottom span { color: #9ee7ff; background: #9ee7ff; }
+.scroll-cue { color: #9eabc1; }
+.scroll-cue span { background: #637898; }
+
+.intro-section { background: #0d1527; }
+.section-eyebrow > span:first-child { color: #91a6ca; }
+.intro-grid h2 span,
+.section-heading h2 span { color: #8faeff; }
+.section-copy,
+.section-heading > p { color: #a0acc3; }
+.word-strip { border-top-color: #29364e; color: #b3c4df; }
+.word-strip i { color: #9be7ff; }
+
+.feature-lilac { background: linear-gradient(145deg, #171d39, #12182c); }
+.feature-mint { background: linear-gradient(145deg, #102b39, #111d31); }
+.feature-peach { background: linear-gradient(145deg, #26213f, #171a32); }
+.feature-card { border: 1px solid rgb(163 191 235 / 13%); }
+.feature-icon {
+  border-color: rgb(195 216 255 / 15%);
+  background: rgb(211 225 255 / 8%);
+  color: #a9ddff;
+}
+.card-index { color: #a5b4ce; }
+.feature-card > p { color: #a7b2c8; }
+.feature-decoration {
+  border-color: rgb(195 216 255 / 13%);
+  background: rgb(224 233 255 / 5%);
+}
+.discover-decoration span { background: #222c47; color: #c2d0e7; }
+.discover-decoration b { color: #92dfff; }
+.checklist-decoration span { background: #163948; color: #91e7ff; }
+.checklist-decoration i,
+.checklist-decoration b { background: #35415b; }
+.path-decoration span { color: #bfcbdf; }
+.path-decoration i { background: #62718a; }
+.path-decoration b { border-color: #465572; background: #1a2640; color: #9ee7ff; }
+
+.journey-section { background: linear-gradient(135deg, #111e39, #101a31 60%, #192342); }
+.journey-heading .section-eyebrow { color: #b0c2df; }
+.journey-heading .section-eyebrow > span:first-child { color: #9fdff7; }
+.journey-steps li { border-bottom-color: rgb(192 213 248 / 17%); }
+.step-number,
+.step-mark { color: #9ee7ff; }
+.step-mark { border-color: rgb(191 218 255 / 27%); }
+.journey-heading .text-link span { color: #9ee7ff; }
+
+.stack-card {
+  border-color: #26344e;
+  background: linear-gradient(110deg, #111a2b 0%, #111a2b 48%, #131e34 100%);
+}
+.stack-copy h2 span { color: #8faeff; }
+.stack-copy > p:not(.eyebrow) { color: #a0acc3; }
+.stack-tags span { border-color: #36435b; color: #c1cde0; }
+.stack-art {
+  background:
+    radial-gradient(ellipse at center, rgb(74 108 172 / 20%), transparent 67%),
+    #111a2b;
+}
+.stack-ring { border-color: #354868; }
+.stack-node {
+  border-color: #33425e;
+  background: #17233a;
+  box-shadow: 0 10px 28px rgb(0 0 0 / 22%);
+}
+.stack-node > span { background: #183952; color: #9ee7ff; }
+.stack-node small { color: #a2b2cc; }
+.node-cloud > span { background: #29284d; color: #bdb5ff; }
+.node-local > span { background: #1b3950; color: #90d6ff; }
+.stack-line { background: #567195; }
+
+.honesty-card {
+  border-color: #34415a;
+  background: #111a2c;
+}
+.honesty-icon { border-color: #51688d; color: #a8dffd; }
+.honesty-card > div:last-child > p:last-child { color: #aab6ca; }
+
+.closing-card {
+  border: 1px solid rgb(160 200 255 / 25%);
+  background:
+    radial-gradient(ellipse at 86% 35%, rgb(135 126 255 / 25%), transparent 32%),
+    linear-gradient(115deg, #183353, #253666 56%, #352c62);
+}
+.closing-card .eyebrow { color: #cadcf2; }
+.closing-card .status-dot { background: #a6e9ff; box-shadow: 0 0 0 4px rgb(166 233 255 / 15%); }
+.closing-card h2 span { color: #a9eaff; }
+.closing-card > p:not(.eyebrow) { color: #d1def0; }
+.button-light {
+  border-color: rgb(218 230 255 / 36%);
+  background: #edf4ff;
+  color: #14233d;
+}
+.button-light span { color: #3a72b9; }
+.closing-decoration { border-color: rgb(175 209 255 / 24%); color: rgb(194 213 255 / 24%); }
+.closing-decoration i,
+.closing-decoration b { border-color: rgb(175 209 255 / 32%); }
+
+.site-footer { border-top-color: #222f46; background: #0b1221; }
+.footer-inner > p { color: #a0acc3; }
+.footer-inner > p a,
+.footer-source,
+.footer-bottom a { color: #a7dfff; }
+.footer-bottom { border-top-color: #222f46; color: #8998b1; }
+.footer-source span { color: #9ee7ff; }
+
+@media (max-width: 650px) {
+  .nav-links {
+    border-bottom-color: #293750;
+    background: #0b1221;
+  }
+  .nav-links > a:not(.nav-cta) { border-bottom-color: #293750; }
+}
