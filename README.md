@@ -8,6 +8,9 @@ SQLite.
 **Repository:** [github.com/lloydgarcia0923320623-create/iskolarhub](https://github.com/lloydgarcia0923320623-create/iskolarhub)
 **Portfolio website:** [IskolarHub on GitHub Pages](https://lloydgarcia0923320623-create.github.io/iskolarhub/)
 
+The portfolio includes an interactive app preview with sample scholarship
+search, save, and navigation controls.
+
 IskolarHub is a scholarship discovery and tracking project. It combines a
 searchable directory with preliminary, rule-based matching, saved-scholarship
 checklists, offline access to cached information, and guidance tools.

@@ -17,8 +17,8 @@
     <meta property="og:image" content="assets/social-preview.svg?v=blue-hour">
     <title>Lloyd Andrei Garcia — Mobile Developer</title>
     <link rel="icon" href="assets/favicon.svg?v=blue-hour" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=blue-hour">
-    <script src="script.js?v=blue-hour" defer></script>
+    <link rel="stylesheet" href="styles.css?v=interactive-preview">
+    <script src="script.js?v=interactive-preview" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -79,37 +79,102 @@
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="Illustration of the IskolarHub scholarship app">
+        <div class="hero-visual" aria-label="Interactive preview of the IskolarHub app">
           <div class="orbit orbit-one"></div>
           <div class="orbit orbit-two"></div>
           <div class="orbit-dot orbit-dot-one"></div>
           <div class="orbit-dot orbit-dot-two"></div>
           <div class="visual-label label-top"><span></span> A little more clarity</div>
-          <div class="phone">
+          <div class="phone" aria-label="Interactive IskolarHub app preview">
             <div class="phone-top">
               <span>9:41</span>
+              <span class="phone-island" aria-hidden="true"></span>
               <span class="phone-status" aria-hidden="true"><i></i><i></i><i></i></span>
             </div>
-            <div class="app-greeting">
-              <div>
-                <span class="micro-label">YOUR OPPORTUNITY BOARD</span>
-                <h2>Find your<br>next step<span>.</span></h2>
-              </div>
-              <div class="avatar" aria-hidden="true">✳</div>
+            <div class="phone-panels">
+              <section class="phone-panel" id="preview-home" role="tabpanel" aria-labelledby="tab-home">
+                <div class="app-greeting">
+                  <div>
+                    <span class="micro-label">WELCOME TO ISKOLARHUB</span>
+                    <h2>Find your<br>next step<span>.</span></h2>
+                  </div>
+                  <div class="avatar" aria-hidden="true">✳</div>
+                </div>
+                <div class="app-section-title"><strong>Picked for you</strong><span>START HERE</span></div>
+                <article class="opportunity-card" data-scholarship-id="future-makers" data-scholarship-title="Future Makers Grant" data-scholarship-description="A sample opportunity to explore.">
+                  <div class="card-topline"><span class="card-icon icon-lilac" aria-hidden="true">✳</span><span class="tag">SCHOLARSHIP</span><button class="bookmark" type="button" aria-label="Save Future Makers Grant" aria-pressed="false">♡</button></div>
+                  <strong>Future Makers Grant</strong>
+                  <span class="card-caption">A sample opportunity to explore.</span>
+                  <div class="match-line"><span><i></i></span> Start with your criteria</div>
+                </article>
+                <div class="app-section-title"><strong>Make it manageable</strong></div>
+                <div class="app-mini-row">
+                  <div class="mini-card"><span class="mini-icon icon-mint" aria-hidden="true">✓</span><strong>Stay organized</strong><small>Keep your steps together.</small></div>
+                  <div class="mini-card"><span class="mini-icon icon-peach" aria-hidden="true">↗</span><strong>Keep moving</strong><small>See what comes next.</small></div>
+                </div>
+                <p class="sample-note">Interactive preview · sample content</p>
+              </section>
+
+              <section class="phone-panel" id="preview-explore" role="tabpanel" aria-labelledby="tab-explore" hidden>
+                <div class="panel-heading">
+                  <span class="micro-label">YOUR NEXT OPPORTUNITY</span>
+                  <h2>Explore<span>.</span></h2>
+                  <p>Start with a scholarship that fits your goals.</p>
+                </div>
+                <label class="app-search">
+                  <span aria-hidden="true">⌕</span>
+                  <input class="scholarship-search" type="search" placeholder="Search opportunities" aria-label="Search sample scholarships">
+                </label>
+                <div class="app-section-title"><strong>Scholarships</strong><span>2 EXAMPLES</span></div>
+                <div class="scholarship-list">
+                  <article class="opportunity-card" data-scholarship-id="future-makers" data-scholarship-title="Future Makers Grant" data-scholarship-description="A sample opportunity to explore.">
+                    <div class="card-topline"><span class="card-icon icon-lilac" aria-hidden="true">✳</span><span class="tag">STUDENT GRANT</span><button class="bookmark" type="button" aria-label="Save Future Makers Grant" aria-pressed="false">♡</button></div>
+                    <strong>Future Makers Grant</strong>
+                    <span class="card-caption">A sample opportunity to explore.</span>
+                  </article>
+                  <article class="opportunity-card" data-scholarship-id="learning-forward" data-scholarship-title="Learning Forward Award" data-scholarship-description="A sample award for motivated learners.">
+                    <div class="card-topline"><span class="card-icon icon-blue" aria-hidden="true">↗</span><span class="tag">STUDENT AWARD</span><button class="bookmark" type="button" aria-label="Save Learning Forward Award" aria-pressed="false">♡</button></div>
+                    <strong>Learning Forward Award</strong>
+                    <span class="card-caption">A sample award for motivated learners.</span>
+                  </article>
+                  <p class="search-empty" hidden>No sample scholarships match that search.</p>
+                </div>
+              </section>
+
+              <section class="phone-panel" id="preview-saved" role="tabpanel" aria-labelledby="tab-saved" hidden>
+                <div class="panel-heading">
+                  <span class="micro-label">KEEP GOOD OPTIONS CLOSE</span>
+                  <h2>Saved<span>.</span></h2>
+                  <p>Your shortlist, ready when you are.</p>
+                </div>
+                <p class="saved-empty">Tap the heart on an opportunity to add it to your shortlist.</p>
+                <div class="saved-list"></div>
+              </section>
+
+              <section class="phone-panel" id="preview-profile" role="tabpanel" aria-labelledby="tab-profile" hidden>
+                <div class="panel-heading">
+                  <span class="micro-label">YOUR JOURNEY</span>
+                  <h2>Profile<span>.</span></h2>
+                  <p>A few details can help you organize your search.</p>
+                </div>
+                <div class="profile-preview">
+                  <div class="avatar" aria-hidden="true">✳</div>
+                  <strong>Your student profile</strong>
+                  <span>Study details and goals stay yours to manage.</span>
+                </div>
+                <div class="app-section-title"><strong>Good next steps</strong></div>
+                <div class="profile-step"><span>01</span><p>Add your course and year level</p><b>›</b></div>
+                <div class="profile-step"><span>02</span><p>Save an opportunity to review</p><b>›</b></div>
+                <p class="sample-note">Interactive preview · sample content</p>
+              </section>
             </div>
-            <div class="app-search"><span aria-hidden="true">⌕</span> Search scholarships</div>
-            <div class="app-section-title"><strong>Explore</strong><span>See all&nbsp; →</span></div>
-            <div class="opportunity-card">
-              <div class="card-topline"><span class="card-icon icon-lilac">✳</span><span class="tag">SCHOLARSHIP</span><span class="bookmark">♡</span></div>
-              <strong>Room to grow.</strong>
-              <span class="card-caption">Browse opportunities that fit your profile.</span>
-              <div class="match-line"><span><i></i></span> Start with your criteria</div>
+            <div class="phone-tabbar" role="tablist" aria-label="Preview app navigation">
+              <button class="tab-active" id="tab-home" type="button" role="tab" aria-selected="true" aria-controls="preview-home" tabindex="0"><span aria-hidden="true">⌂</span><small>Home</small></button>
+              <button id="tab-explore" type="button" role="tab" aria-selected="false" aria-controls="preview-explore" tabindex="-1"><span aria-hidden="true">⌕</span><small>Explore</small></button>
+              <button id="tab-saved" type="button" role="tab" aria-selected="false" aria-controls="preview-saved" tabindex="-1"><span aria-hidden="true">♡</span><small>Saved</small></button>
+              <button id="tab-profile" type="button" role="tab" aria-selected="false" aria-controls="preview-profile" tabindex="-1"><span aria-hidden="true">◉</span><small>Profile</small></button>
             </div>
-            <div class="app-mini-row">
-              <div class="mini-card"><span class="mini-icon icon-mint">✓</span><strong>Keep track</strong><small>Your checklist, in one place.</small></div>
-              <div class="mini-card"><span class="mini-icon icon-peach">↗</span><strong>Stay on track</strong><small>See upcoming deadlines.</small></div>
-            </div>
-            <div class="phone-tabbar"><span class="tab-active">⌂<small>Home</small></span><span>⌕<small>Explore</small></span><span>♡<small>Saved</small></span><span>◉<small>Profile</small></span></div>
+            <p class="phone-status-message" aria-live="polite"></p>
           </div>
           <div class="visual-label label-bottom"><span>✦</span> Small steps. Big possibilities.</div>
         </div>

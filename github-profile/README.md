@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <a href="https://lloydgarcia0923320623-create.github.io/iskolarhub/"><strong>Visit my portfolio website →</strong></a>
+  <a href="https://lloydgarcia0923320623-create.github.io/iskolarhub/"><strong>Visit my interactive portfolio →</strong></a>
   &nbsp; · &nbsp;
   <a href="https://github.com/lloydgarcia0923320623-create/iskolarhub"><strong>Explore IskolarHub →</strong></a>
   &nbsp; · &nbsp;
