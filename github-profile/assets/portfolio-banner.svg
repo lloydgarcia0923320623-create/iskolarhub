@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="40" y1="0" x2="1160" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0C1728"/>
+      <stop offset="1" stop-color="#172B45"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="104" y1="106" x2="714" y2="277" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8DE8FF"/>
+      <stop offset="1" stop-color="#9C9BFF"/>
+    </linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" stroke="#A9C3E0" stroke-opacity=".055"/>
+    </pattern>
+    <filter id="glow" x="726" y="9" width="472" height="472" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="38"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="360" rx="28" fill="url(#bg)"/>
+  <rect width="1200" height="360" rx="28" fill="url(#grid)"/>
+  <circle cx="960" cy="207" r="160" fill="#6674FF" fill-opacity=".2" filter="url(#glow)"/>
+  <path d="M769 0v360M805 0v360M841 0v360M877 0v360M913 0v360M949 0v360M985 0v360M1021 0v360M1057 0v360M1093 0v360M1129 0v360M1165 0v360M0 27h1200M0 63h1200M0 99h1200M0 135h1200M0 171h1200M0 207h1200M0 243h1200M0 279h1200M0 315h1200M0 351h1200" stroke="#A9C3E0" stroke-opacity=".045"/>
+  <rect x="72" y="58" width="286" height="30" rx="15" fill="#8DE8FF" fill-opacity=".12"/>
+  <circle cx="90" cy="73" r="4" fill="#8DE8FF"/>
+  <text x="104" y="78" fill="#B9F0FF" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1.6">LLOYD ANDREI GARCIA / PORTFOLIO</text>
+  <text x="72" y="159" fill="#F4F7FB" font-family="Segoe UI,Arial,sans-serif" font-size="48" font-weight="700" letter-spacing="-1.6">Thoughtful mobile apps</text>
+  <text x="72" y="216" fill="url(#accent)" font-family="Segoe UI,Arial,sans-serif" font-size="48" font-weight="700" letter-spacing="-1.6">built for real life.</text>
+  <text x="75" y="257" fill="#B2C2D5" font-family="Segoe UI,Arial,sans-serif" font-size="17">Scholarship discovery and student support, built with Flutter.</text>
+  <path d="M920 144c0-35 28-63 63-63s63 28 63 63" stroke="#8DE8FF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M930 145v44c0 7 6 13 13 13h10v-67h-10c-7 0-13 5-13 10Zm106-10h-10v67h10c7 0 13-6 13-13v-44c0-5-6-10-13-10Z" fill="#8DE8FF"/>
+  <path d="M946 136c12-12 25-18 37-18s25 6 37 18v70c-12-12-25-18-37-18s-25 6-37 18v-70Z" fill="#142740" stroke="#8BB8FF" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M983 119v69" stroke="#8BB8FF" stroke-width="4"/>
+  <path d="m946 141 25 7m49-7-25 7m-49 8 25 7m49-7-25 7" stroke="#8DE8FF" stroke-opacity=".72" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="915" cy="127" r="7" fill="#8BB8FF"/>
+  <circle cx="1051" cy="127" r="7" fill="#8BB8FF"/>
+  <circle cx="983" cy="74" r="7" fill="#8DE8FF"/>
+  <path d="M918 122 978 79m70 43-60-43M922 132l56-11m67 11-58-11" stroke="#8BB8FF" stroke-opacity=".6" stroke-width="2"/>
+  <rect x="883" y="239" width="199" height="38" rx="19" fill="#FFFFFF" fill-opacity=".07" stroke="#FFFFFF" stroke-opacity=".12"/>
+  <text x="982.5" y="263" text-anchor="middle" fill="#DAE6F4" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" letter-spacing="1.5">ISKOLARHUB</text>
+  <circle cx="1112" cy="93" r="3" fill="#8DE8FF"/>
+  <circle cx="1094" cy="314" r="4" fill="#8BB8FF"/>
+  <circle cx="838" cy="286" r="3" fill="#9C9BFF"/>
+</svg>
