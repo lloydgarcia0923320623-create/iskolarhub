@@ -108,21 +108,21 @@ document.querySelectorAll(".feature-card").forEach((card) => {
 
 const phoneTabs = Array.from(document.querySelectorAll(".phone-tabbar [role='tab']"));
 
+const activatePhoneTab = (tab) => {
+  phoneTabs.forEach((item) => {
+    const selected = item === tab;
+    item.setAttribute("aria-selected", String(selected));
+    item.tabIndex = selected ? 0 : -1;
+    item.classList.toggle("tab-active", selected);
+
+    const panel = document.getElementById(item.getAttribute("aria-controls"));
+    if (panel) {
+      panel.hidden = !selected;
+    }
+  });
+};
+
 if (phoneTabs.length > 0) {
-  const activatePhoneTab = (tab) => {
-    phoneTabs.forEach((item) => {
-      const selected = item === tab;
-      item.setAttribute("aria-selected", String(selected));
-      item.tabIndex = selected ? 0 : -1;
-      item.classList.toggle("tab-active", selected);
-
-      const panel = document.getElementById(item.getAttribute("aria-controls"));
-      if (panel) {
-        panel.hidden = !selected;
-      }
-    });
-  };
-
   phoneTabs.forEach((tab, index) => {
     tab.addEventListener("click", () => activatePhoneTab(tab));
     tab.addEventListener("keydown", (event) => {
@@ -143,6 +143,66 @@ if (phoneTabs.length > 0) {
       phoneTabs[nextIndex].focus();
       activatePhoneTab(phoneTabs[nextIndex]);
     });
+  });
+}
+
+document.querySelectorAll(".feature-action[data-preview-tab]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const targetTab = document.getElementById(button.dataset.previewTab);
+    const phone = document.querySelector(".phone");
+
+    if (!(targetTab instanceof HTMLButtonElement) || !phone) {
+      return;
+    }
+
+    activatePhoneTab(targetTab);
+    phone.scrollIntoView({ behavior: "smooth", block: "center" });
+    targetTab.focus({ preventScroll: true });
+  });
+});
+
+const stackDetail = document.querySelector(".stack-detail");
+const stackNodes = document.querySelectorAll(".stack-node[data-stack-detail]");
+
+stackNodes.forEach((node) => {
+  node.addEventListener("click", () => {
+    stackNodes.forEach((item) => {
+      item.setAttribute("aria-pressed", String(item === node));
+    });
+
+    if (stackDetail) {
+      stackDetail.textContent = node.dataset.stackDetail ?? "";
+    }
+  });
+});
+
+const heroVisual = document.querySelector(".hero-visual");
+
+if (
+  heroVisual &&
+  window.matchMedia("(hover: hover) and (pointer: fine)").matches &&
+  !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+) {
+  heroVisual.addEventListener("pointermove", (event) => {
+    if (event.pointerType === "touch") {
+      return;
+    }
+
+    const bounds = heroVisual.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width;
+    const y = (event.clientY - bounds.top) / bounds.height;
+    const phone = heroVisual.querySelector(".phone");
+
+    if (phone) {
+      phone.style.setProperty("--phone-tilt-x", `${((0.5 - y) * 5).toFixed(2)}deg`);
+      phone.style.setProperty("--phone-tilt-y", `${((x - 0.5) * 7).toFixed(2)}deg`);
+    }
+  });
+
+  heroVisual.addEventListener("pointerleave", () => {
+    const phone = heroVisual.querySelector(".phone");
+    phone?.style.removeProperty("--phone-tilt-x");
+    phone?.style.removeProperty("--phone-tilt-y");
   });
 }
 

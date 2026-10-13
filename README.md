@@ -9,7 +9,8 @@ SQLite.
 **Portfolio website:** [IskolarHub on GitHub Pages](https://lloydgarcia0923320623-create.github.io/iskolarhub/)
 
 The portfolio includes an interactive app preview with sample scholarship
-search, save, and navigation controls.
+search, save, and navigation controls. Project cards jump into the matching
+preview screen, and the technology diagram reveals what each part contributes.
 
 IskolarHub is a scholarship discovery and tracking project. It combines a
 searchable directory with preliminary, rule-based matching, saved-scholarship

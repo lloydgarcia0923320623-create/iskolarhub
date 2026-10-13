@@ -17,8 +17,8 @@
     <meta property="og:image" content="assets/social-preview.svg?v=blue-hour">
     <title>Lloyd Andrei Garcia — Mobile Developer</title>
     <link rel="icon" href="assets/favicon.svg?v=blue-hour" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=interactive-preview">
-    <script src="script.js?v=interactive-preview" defer></script>
+    <link rel="stylesheet" href="styles.css?v=playful-preview">
+    <script src="script.js?v=playful-preview" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -216,6 +216,7 @@
               <span class="card-index">01 / DISCOVER</span>
               <h3>Find opportunities<br>worth exploring.</h3>
               <p>Browse scholarship records and compare listed criteria with the profile details you provide.</p>
+              <button class="feature-action" type="button" data-preview-tab="tab-explore">Try the preview <span aria-hidden="true">↗</span></button>
               <div class="feature-decoration discover-decoration" aria-hidden="true"><span>COURSE</span><span>YEAR LEVEL</span><span>GWA</span><b>+</b></div>
             </article>
             <article class="feature-card feature-mint">
@@ -223,6 +224,7 @@
               <span class="card-index">02 / GET READY</span>
               <h3>Turn a big application<br>into smaller steps.</h3>
               <p>Save scholarships, keep a personal document checklist, and follow your own application status.</p>
+              <button class="feature-action" type="button" data-preview-tab="tab-saved">See your shortlist <span aria-hidden="true">↗</span></button>
               <div class="feature-decoration checklist-decoration" aria-hidden="true"><span>✓</span><i></i><span>✓</span><i></i><b></b><i></i></div>
             </article>
             <article class="feature-card feature-peach">
@@ -230,6 +232,7 @@
               <span class="card-index">03 / KEEP MOVING</span>
               <h3>Keep your next<br>step in sight.</h3>
               <p>Revisit cached scholarship details and your checklist when the internet isn't available.</p>
+              <button class="feature-action" type="button" data-preview-tab="tab-profile">Explore your journey <span aria-hidden="true">↗</span></button>
               <div class="feature-decoration path-decoration" aria-hidden="true"><span>START</span><i></i><i></i><i></i><b>✳</b></div>
             </article>
           </div>
@@ -259,12 +262,13 @@
             <h2 id="stack-title">A modern mobile stack.<br><span>Purposefully put together.</span></h2>
             <p>Cross-platform Flutter, local persistence, Firebase-backed online features, and AI guidance powered by Firebase AI Logic.</p>
             <div class="stack-tags"><span>Flutter</span><span>Dart</span><span>Firebase</span><span>SQLite</span></div>
+            <p class="stack-detail" aria-live="polite">Flutter brings the IskolarHub app to Android and iOS from one codebase.</p>
           </div>
-          <div class="stack-art" aria-hidden="true">
+          <div class="stack-art" aria-label="Explore the technologies in the IskolarHub stack">
             <div class="stack-ring ring-a"></div><div class="stack-ring ring-b"></div>
-            <div class="stack-node node-app"><span>↗</span><b>Flutter</b><small>THE APP</small></div>
-            <div class="stack-node node-cloud"><span>☁</span><b>Firebase</b><small>WHEN ONLINE</small></div>
-            <div class="stack-node node-local"><span>▤</span><b>SQLite</b><small>ON DEVICE</small></div>
+            <button class="stack-node node-app" type="button" aria-pressed="true" data-stack-detail="Flutter brings the IskolarHub app to Android and iOS from one codebase."><span aria-hidden="true">↗</span><b>Flutter</b><small>THE APP</small></button>
+            <button class="stack-node node-cloud" type="button" aria-pressed="false" data-stack-detail="Firebase provides sign-in and shared scholarship data when a connection is available."><span aria-hidden="true">☁</span><b>Firebase</b><small>WHEN ONLINE</small></button>
+            <button class="stack-node node-local" type="button" aria-pressed="false" data-stack-detail="SQLite keeps selected app data on the device for a more offline-aware experience."><span aria-hidden="true">▤</span><b>SQLite</b><small>ON DEVICE</small></button>
             <div class="stack-line line-one"></div><div class="stack-line line-two"></div>
           </div>
         </div>
