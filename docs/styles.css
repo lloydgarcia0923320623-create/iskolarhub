@@ -1964,6 +1964,19 @@ body {
   font-weight: 800;
   letter-spacing: .14em;
 }
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+}
+.project-actions .text-link { display: inline-flex; align-items: center; gap: 6px; }
+.app-download-note {
+  margin: -8px 0 0;
+  color: #9eacc4;
+  font-size: 11px;
+  line-height: 1.6;
+}
 .inventarise-showcase {
   border-color: rgba(137, 183, 255, 0.24);
   background:
