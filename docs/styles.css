@@ -1957,3 +1957,38 @@ body {
   .stack-node:hover,
   .stack-node[aria-pressed="true"] { translate: none; }
 }
+
+.project-name {
+  color: #9ee7ff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+.inventarise-showcase {
+  border-color: rgba(137, 183, 255, 0.24);
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(71, 122, 201, 0.16), transparent 44%),
+    linear-gradient(135deg, rgba(20, 33, 54, 0.98), rgba(13, 22, 39, 0.98));
+}
+.inventarise-showcase .project-summary h3,
+.inventarise-showcase .metric-box strong {
+  color: #f3f7ff;
+}
+.inventarise-showcase .project-summary p,
+.inventarise-showcase .project-summary ul,
+.inventarise-showcase .metric-box span {
+  color: #c2cee2;
+}
+.inventarise-showcase .metric-box {
+  border-color: rgba(153, 184, 234, 0.18);
+  background: rgba(21, 34, 55, 0.86);
+}
+.inventarise-feature-grid .feature-card > h3 {
+  color: #f3f7ff;
+}
+.inventarise-feature-grid .feature-card > p {
+  color: #c2cee2;
+}
+.inventarise-feature-grid .feature-action {
+  color: #9ee7ff;
+}
