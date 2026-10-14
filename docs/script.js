@@ -2,7 +2,7 @@ const menuButton = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 
 const revealTargets = document.querySelectorAll(
-  ".intro-grid, .word-strip, .section-heading, .feature-card, .journey-heading, .journey-steps li, .stack-card, .honesty-card, .closing-card",
+  ".intro-grid, .about-grid, .word-strip, .section-heading, .skills-grid, .project-showcase, .feature-card, .journey-heading, .journey-steps li, .stack-card, .honesty-card, .closing-card",
 );
 
 if (
